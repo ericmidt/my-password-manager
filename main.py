@@ -35,7 +35,6 @@ def save_password():
     url = website.get().capitalize()
     user = username.get()
     pwd = password.get()
-
     new_data = {
         url: {
             "email": user,
