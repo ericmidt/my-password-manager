@@ -29,9 +29,9 @@ def generate_password():
     password.delete(0, END)
     password.insert(0, pwd)
 
+
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save_password():
-
     url = website.get().capitalize()
     user = username.get()
     pwd = password.get()
@@ -51,7 +51,6 @@ def save_password():
                                                                  f"Website: {website.get()}\nEmail: {username.get()}"
                                                                  f"\nPassword: {password.get()}")
     if is_ok:
-
         try:
             with open("saved_passwords.json", "r") as f:
                 data = json.load(f)
@@ -67,6 +66,7 @@ def save_password():
             website.delete(0, END)
             password.delete(0, END)
             website.focus()
+
 
 # ---------------------------- FIND PASSWORD ------------------------------- #
 def find_password():
